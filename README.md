@@ -1,38 +1,35 @@
-## 1. Getting Started
+## C+Click | WSS Medical Solutions
 
-NOTE: npm commands overwrite the ./public directory.
+## 1. Empezando
 
-Project's source files are placed in ./src/ directory. 
-* ./src/assets - default static files (eg. image placeholders). You should replace them with your own files.
-* ./src/tailwind/ - Tailwind config file used to build the theme. Variables used in Theme Customizer are located in tailwind.config.js file.
+NOTA: Los comandos de npm sobrescriben el directorio ./public.
 
-All your pages (templates) are stored in separated .pug files
-* ./src/pug/*.pug 
+Los archivos fuente del proyecto se encuentran en el directorio ./src/.
+* ./src/assets - Archivos estáticos por defecto (por ejemplo, marcadores de imagen). Debes reemplazarlos con tus propios archivos.
+* ./src/tailwind/ - Archivo de configuración de Tailwind utilizado para construir el tema. Las variables utilizadas en el Personalizador de Tema están ubicadas en el archivo tailwind.config.js.
 
-## 2. Installation
+Todas tus páginas (plantillas) están almacenadas en archivos .pug separados.
+* ./src/pug/*.pug
+
+## 2. Instalación
 
 ```
-# Install dependencies
+# Instalar dependencias
 npm install 
 
-# Run dev server with live preview (Browsersync)
+# Ejecutar el servidor de desarrollo con vista previa en vivo (Browsersync)
 npm run watch
 
-# Or make a production build 
+# O hacer una construcción para producción
 npm run build
 ```
 
-## 3. Contact
+## 3. Contacto
 
-If you have have any questions, feel free to contact me:
+Si tienes alguna pregunta, no dudes en contactarme:
 
-support@pixelrocket.store
+alexgba25@gmail.com
 
-## 4. Learn Frontend Web Development
 
-Want to learn frontend web development so you can build templates like this one? Visit my site: https://www.pixelrocket.store for a range of frontend web development learning resources and courses.
 
-## 5. Credits & Special thanks
-
-Image placeholders from https://unsplash.com/
-Screenshot & Logo placeholders from https://www.figma.com/community
+Este proyecto fue creado por Alejandro Gutiérrez Bahena y es un producto de C+Click.
