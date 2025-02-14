@@ -1,0 +1,90 @@
+<html lang="en">
+  <head>
+    <title>D+Click</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:200,300,400,500,600,700,800,900&amp;subset=latin"/>
+    <link href="template-assets/fonts/fonts.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
+  </head>
+  <body class="antialiased bg-darkBlue-900 text-body font-body">
+    <div>
+      <section x-data="{ mobileNavOpen: false }">
+        <nav class="py-5 bg-darkBlue-900">
+          <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between"><a href="index.html"><img src="images/logo-white-2.png" alt="" style="width: 180px;"/></a>
+              <div class="hidden lg:flex gap-2 p-1 rounded-full bg-white bg-opacity-10"><a class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200" href="px.html">Paciente</a><a class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200" href="visualizer.html">Visualizador</a><a class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200" href="report.html">Interpretación</a></div><a class="hidden lg:flex items-center gap-2 text-white hover:text-blue-500 transition duration-200" href="#"><span class="text-sm font-medium">Descargar Archivo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                  <path d="M5.5 3L10.5 8L5.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a>
+              <button class="lg:hidden" x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg width="51" height="51" viewbox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="56" height="56" rx="28" fill="white"></rect>
+                  <path d="M37 32H19M37 24H19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <div class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50" :class="{ 'hidden': !mobileNavOpen, 'block': mobileNavOpen }">
+          <div class="fixed inset-0 bg-black opacity-20" x-on:click="mobileNavOpen = !mobileNavOpen"></div>
+          <nav class="relative p-8 w-full h-full bg-white overflow-y-auto">
+            <div class="flex items-center justify-between"><a class="inline-block" href="#"><img src="images/logo-black-2.png" alt=""/></a>
+              <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </div>
+            <ul class="flex flex-col gap-12 py-12 my-12">
+              <li><a class="text-sm font-medium" href="px.html">Paciente</a></li>
+              <li><a class="text-sm font-medium" href="visualizer.html">Visualizador</a></li>
+              <li><a class="text-sm font-medium" href="report.html">Interpretación</a></li>
+            </ul> 
+            <div class="text-center"><a class="inline-flex items-center gap-2 text-black hover:text-opacity-80 transition duration-200" href="#"><span class="text-sm font-medium">Descargar Archivo</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+                  <path d="M5.5 3L10.5 8L5.5 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg></a></div>
+          </nav>
+        </div>
+      </section>
+
+<!-- Report Image Section -->
+<section class="bg-darkBlue-900">
+  <div class="container max-w-8xl mx-auto px-4">
+    <div class="flex justify-center">
+      <div class="w-full lg:w-2/3 p-4">
+        <img class="rounded-xl object-contain w-full" style="height:900px" src="template-assets/images/about/doc1.jpg" alt="Reporte Imagen"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+      <div class="border-t border-white border-opacity-30 w-full">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap -m-4">
+            <div class="w-full sm:w-1/2 lg:w-2/3 p-4">
+              <div class="pl-4 py-11 pr-8 sm:border-r border-white border-opacity-30 h-full">
+                <div class="flex items-center justify-between flex-wrap gap-4"><a class="inline-block" href="#"><img class="h-8" src="images/logo-white-2.png" alt=""/></a>
+                  <p class="text-white">© WSS Medical Solutions.</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+              <div class="pl-8 xl:pl-28 pr-8 py-11">
+                <div class="flex flex-wrap gap-6"><a class="inline-block" href="#"><img src="template-assets/images/logos/twitter-x-logo.svg" alt=""/></a>              <a class="inline-block" href="#"><img src="template-assets/images/logos/linkedin-logo.svg" alt=""/></a>              <a class="inline-block" href="#"><img src="template-assets/images/logos/instagram-logo.svg" alt=""/></a>              <a class="inline-block" href="#"><img src="template-assets/images/logos/facebook-logo.svg" alt=""/></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

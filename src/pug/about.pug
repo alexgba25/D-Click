@@ -1,0 +1,238 @@
+html(lang="en")
+    head
+        title Visit www.pixelrocket.store to learn how to become a frontend web developer
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="preconnect", href="https://fonts.gstatic.com")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Outfit:200,300,400,500,600,700,800,900&subset=latin")
+        link(href="template-assets/fonts/fonts.css", rel="stylesheet")
+        link(rel="stylesheet", href="css/tailwind/tailwind.min.css")
+        link(rel="icon", type="image/png", sizes="32x32", href="favicon.png")
+        script(src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js", defer="defer")
+    body(class="antialiased bg-body text-body font-body")
+        div(class="")
+            div
+                p(class="mb-0 py-3 text-center bg-sweetBlue-50 text-sweetBlue-800")
+                    | Want to learn how to build templates like this one? Visit 
+                    a(href="https://www.pixelrocket.store") www.pixelrocket.store
+            section(x-data="{ mobileNavOpen: false }")
+                nav(class="py-5 bg-darkBlue-900")
+                    div(class="container mx-auto px-4")
+                        div(class="flex items-center justify-between")
+                            a(href="index.html")
+                                img(src="images/logo-white-2.svg", alt="")
+                            div(class="hidden lg:flex gap-2 p-1 rounded-full bg-white bg-opacity-10")
+                                a(href="index.html", class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200") Home
+                                a(href="about.html", class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200") About
+                                a(href="pricing.html", class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200") Pricing
+                                a(href="blog.html", class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200") Blog
+                                a(href="contact.html", class="px-3 py-2 rounded-full text-white text-sm hover:bg-white hover:bg-opacity-20 transition duration-200") Contact
+                            a(href="login.html", class="hidden lg:flex items-center gap-2 text-white hover:text-blue-500 transition duration-200")
+                                span(class="text-sm font-medium") Sign in
+                                svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewbox="0 0 16 16", fill="none")
+                                    path(d="M5.5 3L10.5 8L5.5 13", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                            button(class="lg:hidden", x-on:click="mobileNavOpen = !mobileNavOpen")
+                                svg(width="51", height="51", viewbox="0 0 56 56", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                    rect(width="56", height="56", rx="28", fill="white")
+                                    path(d="M37 32H19M37 24H19", stroke="black", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+                div(:class="{ 'hidden': !mobileNavOpen, 'block': mobileNavOpen }", class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50")
+                    div(x-on:click="mobileNavOpen = !mobileNavOpen", class="fixed inset-0 bg-black opacity-20")
+                    nav(class="relative p-8 w-full h-full bg-white overflow-y-auto")
+                        div(class="flex items-center justify-between")
+                            a(href="#", class="inline-block")
+                                img(src="images/logo-black-2.svg", alt="")
+                            button(x-on:click="mobileNavOpen = !mobileNavOpen")
+                                svg(width="24", height="24", viewbox="0 0 24 24", fill="none", xmlns="http://www.w3.org/2000/svg")
+                                    path(d="M6 18L18 6M6 6L18 18", stroke="#111827", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+                        ul(class="flex flex-col gap-12 py-12 my-12")
+                            li
+                                a(href="index.html", class="text-sm font-medium") Home
+                            li
+                                a(href="about.html", class="text-sm font-medium") About
+                            li
+                                a(href="pricing.html", class="text-sm font-medium") Pricing
+                            li
+                                a(href="blog.html", class="text-sm font-medium") Blog
+                            li
+                                a(href="contact.html", class="text-sm font-medium") Contact
+                        div(class="text-center")
+                            a(href="login.html", class="inline-flex items-center gap-2 text-black hover:text-opacity-80 transition duration-200")
+                                span(class="text-sm font-medium") Sign in
+                                svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewbox="0 0 16 16", fill="none")
+                                    path(d="M5.5 3L10.5 8L5.5 13", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            section(class="bg-darkBlue-900 pt-24 pb-28 relative")
+                div(class="container mx-auto px-4")
+                    img(class="absolute right-0 top-0 object-cover", style="height:600px", src="template-assets/images/about/illustration-blue2.svg", alt="")
+                    div(class="relative z-50")
+                        h1(class="font-heading text-white text-5xl md:text-6xl font-semibold max-w-2xl mb-56") We’re a passionate team building the future of bookkeeping
+                        div(class="border-b border-blue-500 pb-9 mb-32")
+                            div(class="bg-darkBlue-900")
+                                div(class="flex flex-wrap items-stretch -m-4")
+                                    div(class="w-full md:w-1/3 lg:w-1/2 p-4")
+                                        div(class="border-r border-transparent md:border-white md:border-opacity-10 flex flex-col justify-center h-full")
+                                            p(class="text-white text-center md:text-left text-opacity-50 mb-2") Investors
+                                            p(class="text-white text-center md:text-left mx-auto md:mx-0 text-2xl font-semibold max-w-xs") Funded by industry-leading investors
+                                    div(class="w-full md:w-1/3 lg:w-1/4 p-4")
+                                        div(class="border-r border-transparent md:border-white md:border-opacity-10 flex flex-col justify-center h-full")
+                                            p(class="text-white text-opacity-50 mb-2 text-center") Team members
+                                            p(class="text-white text-5xl font-bold text-center") 110
+                                    div(class="w-full md:w-1/3 lg:w-1/4 p-4")
+                                        div(class="flex flex-col justify-center h-full")
+                                            p(class="text-white text-opacity-50 mb-2 text-center") Founded in
+                                            p(class="text-white text-5xl font-bold text-center") 2024
+                        div(class="flex flex-wrap -m-4 mb-48")
+                            div(class="w-full lg:w-1/2 p-4")
+                                div(class="flex flex-col justify-end h-full")
+                                    p(class="text-white text-xl font-medium mb-10") Our investors
+                                    div(class="flex flex-wrap gap-8 mb-10")
+                                        img(class="h-6", src="template-assets/images/logos/aurevo-logo.svg", alt="")
+                                        img(class="h-6", src="template-assets/images/logos/syra-logo-light.svg", alt="")
+                                        img(class="h-6", src="template-assets/images/logos/lume-logo.svg", alt="")
+                                    div(class="flex flex-wrap gap-8")
+                                        img(class="h-6", src="template-assets/images/logos/acme-logo.svg", alt="")
+                                        img(class="h-6", src="template-assets/images/logos/cronix-logo.svg", alt="")
+                                        img(class="h-6", src="template-assets/images/logos/axiomatic-logo.svg", alt="")
+                            div(class="w-full lg:w-1/2 p-4")
+                                h2(class="font-heading text-white text-4xl font-semibold mb-12") Our Story
+                                p(class="text-white text-lg max-w-xl mb-8") We emerged on the scene in 2024, a visionary solution born from the collective expertise of its founders. United by a shared passion for redefining the bookkeeping landscape, they embarked on a journey to create a cutting-edge SaaS platform.
+                                p(class="text-white text-lg max-w-xl") Four Points is more than a software; it's the culmination of years of industry insight and dedication to revolutionize the way businesses manage their financial records. Built on the pillars of efficiency, accuracy, and collaboration, Vista sets a new standard for bookkeeping solutions, empowering businesses to navigate their financial landscape with ease and confidence.
+                        div(class="rounded-3xl bg-gradient-to-t from-darkBlue-900 via-blue-700 to-blue-400 py-20 px-4")
+                            p(class="uppercase text-center text-sweetBlue-300 text-xs mb-4") CAREERS
+                            h2(class="font-heading text-white text-center text-4xl md:text-5xl font-bold mb-4") Join our amazing global team
+                            p(class="text-center text-white text-opacity-70 mb-10 max-w-4xl mx-auto") We're a small but strong team that enjoys having a lot of ownership and autonomy. We take pride in our work and come from places such as Pipe, AngelList, and - to name a few.
+                            div(class="text-center")
+                                a(href="#", class="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full shadow-blue")
+                                    div(class="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full")
+                                    div(class="relative z-50 flex items-center py-3 px-5 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200")
+                                        p(class="text-blueSecondary-900") Open positions
+            section(class="bg-darkBlue-900 pb-56 pt-32")
+                div(class="container mx-auto px-4")
+                    p(class="uppercase text-sweetBlue-400 tracking-widest text-xs mb-4") diverse and world-class
+                    div(class="flex justify-between items-center flex-wrap gap-4 mb-20")
+                        h1(class="font-heading text-white text-4xl md:text-5xl font-bold") Meet our team
+                        div(class="flex flex-wrap items-center gap-8")
+                            div(class="flex items-center gap-2")
+                                svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewbox="0 0 16 16", fill="none")
+                                    path(d="M9.27232 5.86195L9.50687 6.42602L10.1158 6.47481L13.4188 6.73946L10.9024 8.89524L10.4387 9.29254L10.5803 9.88656L11.3486 13.1096L8.52091 11.3826L7.99968 11.0642L7.47844 11.3826L4.65075 13.1096L5.41909 9.88656L5.56069 9.29254L5.09694 8.89524L2.58054 6.73946L5.88355 6.47481L6.49248 6.42602L6.72703 5.86195L7.99968 2.80137L9.27232 5.86195ZM4.581 13.4022L4.58109 13.4019L4.581 13.4022ZM2.28065 6.76349L2.28088 6.76347L2.28065 6.76349Z", fill="#6691FF", stroke="#6691FF", style="fill:#6691FF;fill:color(display-p3 0.4000 0.5680 1.0000);fill-opacity:1;stroke:#6691FF;stroke:color(display-p3 0.4000 0.5680 1.0000);stroke-opacity:1;", stroke-width="2")
+                                p(class="text-blue-500 font-semibold") We are hiring!
+                            a(href="#", class="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full")
+                                div(class="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full")
+                                div(class="relative z-50 flex items-center py-2 px-4 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200")
+                                    p(class="mr-2 text-blueSecondary-900") Careers
+                                    svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewbox="0 0 16 16", fill="none")
+                                        path(d="M9.43032 8.28857L9.4303 8.28856L9.42602 8.29284L6.45312 11.2657V8.20662V4.7275L8.11268 6.38706L9.42602 7.70039C9.59121 7.86558 9.58501 8.13574 9.43032 8.28857Z", fill="black", stroke="currentColor", stroke-width="2")
+                    div(class="flex flex-wrap -m-4")
+                        div(class="w-full lg:w-1/3 p-4")
+                            div(class="relative bg-blue-500 rounded-2xl pt-7 mb-12 lg:mb-0")
+                                img(class="mx-auto h-72 object-cover", src="template-assets/images/team/team1.png", alt="")
+                                div(class="absolute -bottom-12 left-4 right-4")
+                                    div(class="bg-blueSecondary-900 rounded-xl p-4")
+                                        p(class="text-white text-lg font-semibold mb-1") David Dobryk
+                                        div(class="flex flex-wrap justify-between items-center gap-4")
+                                            p(class="text-white text-opacity-70 text-sm") Founder & CEO
+                                            div(class="flex gap-4")
+                                                a(href="#", class="inline-block opacity-50 hover:opacity-100 transition duration-200")
+                                                    img(class="h-4", src="template-assets/images/logos/twitter-x-logo.svg", alt="")
+                                                |                                           
+                                                a(href="#", class="inline-block opacity-50 hover:opacity-100 transition duration-200")
+                                                    img(class="h-4", src="template-assets/images/logos/linkedin-logo.svg", alt="")
+                        div(class="w-full lg:w-1/3 p-4")
+                            div(class="relative bg-blue-500 rounded-2xl pt-7 mb-12 lg:mb-0")
+                                img(class="mx-auto h-72 object-cover", src="template-assets/images/team/team2.png", alt="")
+                                div(class="absolute -bottom-12 left-4 right-4")
+                                    div(class="bg-blueSecondary-900 rounded-xl p-4")
+                                        p(class="text-white text-lg font-semibold mb-1") Milena Graz
+                                        div(class="flex flex-wrap justify-between items-center gap-4")
+                                            p(class="text-white text-opacity-70 text-sm") Founder & CEO
+                                            div(class="flex gap-4")
+                                                a(href="#", class="inline-block opacity-50 hover:opacity-100 transition duration-200")
+                                                    img(class="h-4", src="template-assets/images/logos/twitter-x-logo.svg", alt="")
+                                                |                                           
+                                                a(href="#", class="inline-block opacity-50 hover:opacity-100 transition duration-200")
+                                                    img(class="h-4", src="template-assets/images/logos/linkedin-logo.svg", alt="")
+                        div(class="w-full lg:w-1/3 p-4")
+                            div(class="relative bg-blue-500 rounded-2xl pt-7")
+                                img(class="mx-auto h-72 object-cover", src="template-assets/images/team/team3.png", alt="")
+                                div(class="absolute -bottom-12 left-4 right-4")
+                                    div(class="bg-blueSecondary-900 rounded-xl p-4")
+                                        p(class="text-white text-lg font-semibold mb-1") Mike Nelson
+                                        div(class="flex flex-wrap justify-between items-center gap-4")
+                                            p(class="text-white text-opacity-70 text-sm") Head of Technology
+                                            div(class="flex gap-4")
+                                                a(href="#", class="inline-block opacity-50 hover:opacity-100 transition duration-200")
+                                                    img(class="h-4", src="template-assets/images/logos/twitter-x-logo.svg", alt="")
+                                                |                                           
+                                                a(href="#", class="inline-block opacity-50 hover:opacity-100 transition duration-200")
+                                                    img(class="h-4", src="template-assets/images/logos/linkedin-logo.svg", alt="")
+            section(class="bg-darkBlue-900 py-28")
+                div(class="container mx-auto px-4")
+                    div(class="rounded-3xl w-full px-7 md:px-14 py-20 bg-gradient-to-b from-darkBlue-900 via-blue-700 to-blue-400 relative h-96")
+                        div(class="relative z-50 flex flex-col justify-center items-start h-full")
+                            h1(class="font-heading text-white text-4xl md:text-5xl font-bold mb-10 max-w-md md:max-w-xl") Want to learn how to make templates like this one?
+                            a(href="#", class="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full")
+                                div(class="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full")
+                            div(class="relative z-50 flex items-center py-3 px-5 bg-white group-hover:bg-white group-focus:bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200")
+                                a(href="#", class="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full")
+                                a(href="https://www.pixelrocket.store", class="text-pinkSecondary-900 group-hover:text-pinkSecondary-900 group-focus:text-pinkSecondary-900") Visit Pixel Rocket
+                        img(class="absolute right-0 top-0 object-cover h-full rounded-3xl", src="template-assets/images/cta/illustration-blue.svg", alt="")
+            section(class="bg-gradient-to-t from-darkBlue-900 via-blue-700 to-blue-400 overflow-hidden")
+                div(class="container mx-auto px-4")
+                    div(class="flex flex-wrap -m-4")
+                        div(class="w-full md:w-1/2 lg:w-2/3 p-4")
+                            div(class="lg:pl-4 py-20 md:pr-8 md:border-r border-white border-opacity-30 h-full")
+                                p(class="font-heading text-white text-xl font-semibold mb-4") Subscribe to our newsletter
+                                form(action="")
+                                    div(class="rounded-full bg-white bg-opacity-5 border border-white border-opacity-10 p-1 flex items-center max-w-sm")
+                                        input(class="flex-1 bg-transparent outline-none text-white placeholder-gray-300 pl-4", type="email", placeholder="Email address*")
+                                        button(type="submit", class="group relative inline-block p-0.5 font-semibold overflow-hidden rounded-full")
+                                            div(class="absolute inset-0 bg-gradient-to-b from-white to-gray-500 group-focus:to-white opacity-40 group-focus:opacity-20 rounded-full")
+                                            div(class="relative z-50 flex items-center py-2 px-4 bg-white group-hover:bg-opacity-80 group-focus:bg-opacity-80 rounded-full transition duration-200")
+                                                p(class="text-darkBlue-900") Subscribe
+                        div(class="w-full md:w-1/2 lg:w-1/3 p-4")
+                            div(class="pl-8 xl:pl-24 py-20 pr-8 h-full")
+                                div(class="flex flex-wrap justify-between gap-6")
+                                    ul(class="flex flex-col gap-6")
+                                        li
+                                            p(class="font-heading text-white font-semibold") Product
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") Features
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") How it works
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") Pricing
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") FAQs
+                                    ul(class="flex flex-col gap-6")
+                                        li
+                                            p(class="font-heading text-white font-semibold") Company
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") About
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") Blog
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") Contact
+                                        li
+                                            a(href="#", class="text-white hover:text-opacity-70 text-lg transition duration-200") Privacy Policy
+                div(class="border-t border-white border-opacity-30 w-full")
+                    div(class="container mx-auto px-4")
+                        div(class="flex flex-wrap -m-4")
+                            div(class="w-full sm:w-1/2 lg:w-2/3 p-4")
+                                div(class="pl-4 py-11 pr-8 sm:border-r border-white border-opacity-30 h-full")
+                                    div(class="flex items-center justify-between flex-wrap gap-4")
+                                        a(class="inline-block", href="#")
+                                            img(class="h-8", src="images/logo-white-2.svg", alt="")
+                                        p(class="text-white") © Four Points. All rights reserved.
+                            div(class="w-full sm:w-1/2 lg:w-1/3 p-4")
+                                div(class="pl-8 xl:pl-28 pr-8 py-11")
+                                    div(class="flex flex-wrap gap-6")
+                                        a(href="#", class="inline-block")
+                                            img(src="template-assets/images/logos/twitter-x-logo.svg", alt="")
+                                        |               
+                                        a(href="#", class="inline-block")
+                                            img(src="template-assets/images/logos/linkedin-logo.svg", alt="")
+                                        |               
+                                        a(href="#", class="inline-block")
+                                            img(src="template-assets/images/logos/instagram-logo.svg", alt="")
+                                        |               
+                                        a(href="#", class="inline-block")
+                                            img(src="template-assets/images/logos/facebook-logo.svg", alt="")
