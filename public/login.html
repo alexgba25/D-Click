@@ -1,24 +1,31 @@
-
 <html lang="en">
   <head>
     <title>D+Click</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:200,300,400,500,600,700,800,900&amp;subset=latin"/>
     <link href="template-assets/fonts/fonts.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
+
+    
   </head>
   <body class="antialiased bg-darkBlue-900 text-body font-body">
+    <!-- Loader Wrapper (aparece al cargar la página) -->
+    <div class="loader-wrapper" id="loaderWrapper">
+      <div class="loader"></div>
+    </div>
+
     <div>
+      <!-- Tu contenido de la página aquí -->
       <section class="bg-darkBlue-900 pr-6 pl-6 lg:pl-28 py-6">
         <div class="flex flex-wrap -m-4">
           <div class="w-full lg:w-1/2 p-4">
+            <a href="#"><img src="images/logo-white-2.png" alt="" style="width: 180px;"/></a>
             <div class="flex flex-col justify-center h-full max-w-md mx-auto">
               <h1 class="font-heading text-white text-4xl font-bold mb-4">Bienvenido a D+Click</h1>
-              <p class="text-gray-400 mb-8"><span>Tus resultados en un click</span>          </p>
+              <p class="text-gray-400 mb-8"><span>Tus resultados en un click</span></p>
               <form action="">
                 <label class="block text-sm mb-2 text-white font-medium" for="email">Id. de Paciente</label>
                 <input class="px-4 py-3 mb-6 rounded-full border border-white border-opacity-10 bg-white bg-opacity-5 text-sm placeholder-white placeholder-opacity-50 text-white focus:border-white focus:border focus:border-opacity-50 transition duration-200 outline-none w-full" type="email" id="email" placeholder="Ingresa tu ID"/>
@@ -38,12 +45,20 @@
                     <p class="text-white text-center">Acceder</p>
                   </div>
                 </button>
-                
               </form>
             </div>
           </div>
-          <div class="w-full lg:w-1/2 p-4"><img class="ml-auto object-cover rounded-2xl" style="height:850px" src="template-assets/images/sign-up/picture-blue1.png" alt=""/></div>
+          <div class="w-full lg:w-1/2 p-4"><img class="ml-auto rounded-2xl" style="height:850px; object-fit: contain;" src="template-assets/images/sign-up/picture-blue1.png" alt=""/></div>
         </div>
+      </section>
     </div>
+
+    <script>
+      // Hacer que el loader desaparezca después de 5 segundos
+      setTimeout(function() {
+        const loaderWrapper = document.getElementById('loaderWrapper');
+        loaderWrapper.style.display = 'none'; // Ocultar el loader
+      }, 3000); // 5 segundos
+    </script>
   </body>
 </html>

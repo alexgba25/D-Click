@@ -53,15 +53,73 @@
       </section>
 
 <!-- Report Image Section -->
-<section class="bg-darkBlue-900">
-  <div class="container max-w-8xl mx-auto px-4">
+<section class="bg-darkBlue-900" id="imageSection">
+  <div class="container max-w-8xl mx-auto px-4 p-4">
     <div class="flex justify-center">
       <div class="w-full lg:w-2/3 p-4">
-        <img class="rounded-xl object-contain w-full" style="height:900px" src="template-assets/images/about/doc1.jpg" alt="Reporte Imagen"/>
+        <img id="reportImage" class="rounded-xl object-contain w-full" src="template-assets/images/about/doc1.jpg" alt="Reporte Imagen"/>
       </div>
+    </div>
+    <!-- Full Screen Button -->
+    <div class="flex justify-center gap-4 mt-4">
+      <!-- Full Screen -->
+      <button id="fullScreen" class="bg-blue-500 p-3 rounded-full text-white">Pantalla Completa</button>
     </div>
   </div>
 </section>
+
+<script>
+  // Full Screen
+  document.getElementById("fullScreen").addEventListener("click", function() {
+    let imageContainer = document.getElementById('imageSection');
+
+    // Enter full screen
+    if (imageContainer.requestFullscreen) {
+      imageContainer.requestFullscreen();
+    } else if (imageContainer.mozRequestFullScreen) { // Firefox
+      imageContainer.mozRequestFullScreen();
+    } else if (imageContainer.webkitRequestFullscreen) { // Chrome, Safari and Opera
+      imageContainer.webkitRequestFullscreen();
+    } else if (imageContainer.msRequestFullscreen) { // IE/Edge
+      imageContainer.msRequestFullscreen();
+    }
+
+    // Hide full screen button
+    this.style.display = 'none';
+  });
+
+  // Exit full screen
+  document.addEventListener("fullscreenchange", function() {
+    if (!document.fullscreenElement) {
+      // Show full screen button again when exiting full screen
+      document.getElementById("fullScreen").style.display = 'inline-block';
+    }
+  });
+
+  // For browsers like Firefox and older versions of Chrome that may use different events
+  document.addEventListener("webkitfullscreenchange", function() {
+    if (!document.webkitFullscreenElement) {
+      // Show full screen button again when exiting full screen
+      document.getElementById("fullScreen").style.display = 'inline-block';
+    }
+  });
+
+  document.addEventListener("mozfullscreenchange", function() {
+    if (!document.mozFullScreenElement) {
+      // Show full screen button again when exiting full screen
+      document.getElementById("fullScreen").style.display = 'inline-block';
+    }
+  });
+
+  document.addEventListener("msfullscreenchange", function() {
+    if (!document.msFullscreenElement) {
+      // Show full screen button again when exiting full screen
+      document.getElementById("fullScreen").style.display = 'inline-block';
+    }
+  });
+</script>
+
+
 
 
 

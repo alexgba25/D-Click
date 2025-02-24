@@ -56,30 +56,24 @@
 
       
       
-      <section class="bg-darkBlue-900" style="
-      padding-top: 3rem;
-      padding-bottom: 7rem;
-  " x-data="{ activeSlide: 1, images: ['https://medlineplus.gov/images/Xray_share.jpg', 'https://medlineplus.gov/images/Xray_share.jpg', 'https://medlineplus.gov/images/Xray_share.jpg'] }">
+      <section class="bg-darkBlue-900" style="padding-top: 3rem; padding-bottom: 7rem;" x-data="{ activeSlide: 1, images: ['https://medlineplus.gov/images/Xray_share.jpg', 'https://assets1.farmaciasanpablo.com.mx/landings/_blog/consultorio/radiografia-de-torax-normal.jpg', 'https://medlineplus.gov/images/Xray_share.jpg'] }">
         <div class="container mx-auto px-4">
-          <!-- Gallery Image Display -->
-          <div class="flex justify-center items-center mb-8">
-            <img :src="images[activeSlide - 1]" class="object-cover rounded-2xl" style="
-            width: 70% "!important";
-        " />
-          </div>
-      
-          <!-- Navigation Arrows Below Image -->
-          <div class="flex justify-center gap-8 mb-6">
-            <button x-on:click="activeSlide = (activeSlide === 1 ? images.length : activeSlide - 1)" class="bg-blue-500 p-3 rounded-full text-white">
-              &lt;
-            </button>
-            <button x-on:click="activeSlide = (activeSlide === images.length ? 1 : activeSlide + 1)" class="bg-blue-500 p-3 rounded-full text-white">
-              &gt;
-            </button>
-          </div>
+            <!-- Gallery Image Display -->
+            <div class="flex justify-center items-center mb-8 w-full md:w-3/5">
+                <img :src="images[activeSlide - 1]" class="object-cover rounded-2xl w-full" style="max-width: 900px; object-fit: contain;" />
+            </div>
+    
+            <!-- Navigation Arrows Below Image -->
+            <div class="flex justify-center gap-8 mb-6">
+                <button x-on:click="activeSlide = (activeSlide === 1 ? images.length : activeSlide - 1)" class="bg-blue-500 p-3 rounded-full text-white">
+                    Atras
+                </button>
+                <button x-on:click="activeSlide = (activeSlide === images.length ? 1 : activeSlide + 1)" class="bg-blue-500 p-3 rounded-full text-white">
+                    Siguiente
+                </button>
+            </div>
         </div>
-      </section>
-      
+    </section>
 
 
 
